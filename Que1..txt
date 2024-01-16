@@ -1,0 +1,90 @@
+Que1.
+$ #!/bin/bash
+
+# Accept three numbers from the user
+echo "Enter three numbers:"
+read num1
+read num2
+read num3
+
+# Find the largest number
+largest=$num1
+
+if [ $num2 -gt $largest ]; then
+  largest=$num2
+fi
+
+if [ $num3 -gt $largest ]; then
+  largest=$num3
+fi
+
+# Print the largest number
+echo "The largest number is: $largest"
+
+Enter three numbers:
+2
+5
+9
+The largest number is: 9
+
+
+
+Que2.
+
+$ #!/bin/bash
+
+# Create a file 'cdac.txt' and write 5 lines
+echo -e "Java is great\nScripting is easy\nI love Java\nPython is good, too\nHello, Java World!" > cdac.txt
+
+# Count the number of lines that do not contain the word 'Java'
+count=$(grep -v "Java" cdac.txt | wc -l)
+
+# Print the count
+echo "Number of lines without the word 'Java': $count"
+
+
+Number of lines without the word 'Java': 2
+
+
+Que3.
+$ #!/bin/bash
+
+# Create a directory called 'one'
+mkdir one
+
+# Create any 2 files in 'one'
+touch one/file1.txt
+touch one/file2.txt
+
+# Inside 'one', create another directory called 'two'
+mkdir one/two
+
+# Copy the 2 files from 'one' to 'two'
+cp one/file1.txt one/two/
+cp one/file2.txt one/two/
+
+echo "Files copied successfully."
+
+Files copied successfully.
+
+
+Que4.
+
+#!/bin/bash
+
+mkdir one
+
+touch one/file1.txt
+touch one/file2.txt
+
+
+mkdir one/two
+
+
+cp one/file1.txt one/two/
+cp one/file2.txt one/two/
+
+
+$ cp one/file2.txt one/two/
+
+
